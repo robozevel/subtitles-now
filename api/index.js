@@ -3,7 +3,7 @@ const cors = require('micro-cors')()
 const { parse } = require('url')
 const getSubtitles = require('./subtitles')
 
-const rIMDb = /^\/?(tt\d{7})\/?$/
+const rIMDb = /^\/(tt\d{7})\/?$/
 const handler = async ({ url }) => {
   const { pathname } = parse(url)
   const [, imdbid] = pathname.match(rIMDb) || []

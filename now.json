@@ -7,11 +7,34 @@
     {
       "src": "api/index.js",
       "use": "@now/node"
+    },
+    {
+      "src": "*.md",
+      "use": "@now/md",
+      "config": {
+        "title": "subtitles.now.sh",
+        "language": "en",
+        "meta": [
+          {
+            "name": "description",
+            "content": "Lookup OpenSubtitles by IMDb id"
+          }
+        ],
+        "css": "/style.css"
+      }
+    },
+    {
+      "src": "*.css",
+      "use": "@now/static"
     }
   ],
   "routes": [
     {
-      "src": "/.*",
+      "src": "/?",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/tt\\d{7}/?",
       "dest": "/api/index.js"
     }
   ],
