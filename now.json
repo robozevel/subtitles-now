@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "alias": [
+    "subtitles"
+  ],
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/api/index.js"
+    }
+  ],
+  "env": {
+    "useragent": "TemporaryUserAgent"
+  }
+}

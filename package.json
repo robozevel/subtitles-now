@@ -1,0 +1,30 @@
+{
+  "name": "subtitles-now",
+  "version": "1.0.0",
+  "description": "Lookup OpenSubtitles by IMDb id",
+  "main": "index.js",
+  "scripts": {
+    "dev": "useragent=TemporaryUserAgent micro-dev ./api",
+    "deploy": "now"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robozevel/subtitles-now.git"
+  },
+  "author": "Guy Levi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robozevel/subtitles-now/issues"
+  },
+  "homepage": "https://github.com/robozevel/subtitles-now#readme",
+  "dependencies": {
+    "micro": "^9.3.3",
+    "micro-cors": "^0.1.1",
+    "node-fetch": "^2.4.0",
+    "opensubtitles-api": "^5.0.1",
+    "subtitle": "^2.0.3"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  }
+}
